@@ -1,0 +1,80 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+/**
+*
+*
+* LAYOUT
+*
+*
+**/
+
+body {
+	@include outer-container;
+	> section {
+		@include span-columns(12);
+	}
+}
+
+
+/**
+*
+*
+* VISUAL: Controls
+*
+*
+**/
+form {
+	display: block;
+	> * {
+		margin: 0.2em 0;
+	}
+}
+input {
+	padding: 1em;
+	border: solid 1px grey;
+	width: 100%;
+}
+body > section {
+	padding: 1em;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+/**
+*
+*
+* VISUAL: Page controls
+*
+*
+**/
+
+body > section {
+
+}
+
+body > section.cta h1 {
+	margin: 0;
+}
+
+body > section.fish {
+	padding: 1em 0;
+	ul {
+		list-style:none;
+		clear:both;
+		padding: 0em;
+		margin: 0em;
+		> li {
+			padding: 1em;
+			margin: 0em -1px;
+			border-top: 1px solid grey;
+			border-left: 1px solid grey;
+			border-right: 1px solid grey;
+		}	
+		> li:last-child	 {
+			border-bottom: 1px solid grey;
+		}
+	}
+}
