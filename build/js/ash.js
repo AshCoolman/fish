@@ -69,21 +69,19 @@ Fish.method('render', function (data) {
 * @pconstructor
 **/
 function InterestingFish(el, options) {
-  this.el = el;
-  this.options = options;
+  Fish.call(this, el, options);
 };
-InterestingFish.inherit(Fish);
+InterestingFish.prototype = new Fish();
+
 
 /**
 * Search results of user input
 * @pconstructor
 **/
 function SearchedFish(el, options) {
-  this.el = el;
-  this.options = options;
+  Fish.call(this, el, options);
 }
-SearchedFish.inherit(Fish);
-
+SearchedFish.prototype = new Fish();
 
 
 /**
