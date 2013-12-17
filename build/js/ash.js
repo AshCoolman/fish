@@ -21,7 +21,7 @@ DataStore.prototype.getInterestingFish = function () {
 **/
 DataStore.prototype.setInterestingFish = function (val) {
     if (this._interestingFish != val) {
-      $(window.document).trigger('dataStoreChangedInterestingFish', val);
+      $(window.document).trigger('dataStoreChangedInterestingFish', [val]);
       this._interestingFish = val;
     }
 }
@@ -43,8 +43,9 @@ function setViewables(task) {
 * Object that shows some fish of interest when there is no user input
 * @pconstructor
 **/
-function Fish(el) {
+function Fish(el, options) {
   this.el = el;
+  this.options = options;
 }
 Fish.method('renderFishData', function (fishArr) {
     var html = ['<ul>'], fish;
@@ -52,7 +53,10 @@ Fish.method('renderFishData', function (fishArr) {
       html.push( AshLib.tm('<li class="{threat}"><a href="#">{name}</a></li>', fish) );
     }
     html.push('</ul>');
-    console.log(html.join('\n'))
+
+    if (html.length == 2)
+     html = [this.options.empty || ''];
+
     return html.join('\n');
 });
 Fish.method('render', function (data) {
@@ -64,8 +68,9 @@ Fish.method('render', function (data) {
 * Object that shows some fish of interest when there is no user input
 * @pconstructor
 **/
-function InterestingFish(el) {
+function InterestingFish(el, options) {
   this.el = el;
+  this.options = options;
 };
 InterestingFish.inherit(Fish);
 
@@ -73,8 +78,9 @@ InterestingFish.inherit(Fish);
 * Search results of user input
 * @pconstructor
 **/
-function SearchedFish(el) {
+function SearchedFish(el, options) {
   this.el = el;
+  this.options = options;
 }
 SearchedFish.inherit(Fish);
 
@@ -120,21 +126,33 @@ $('input.autocompletion').autocompletion({
 });
  
 
+
+
+
+//Create Data score
+var dataStore = new DataStore();
+//Link dataStore.interestingFish to the autoComplete plugin
 $('input.autocompletion').on('updatedAutoComplete', function (me) {
     return function (e, items) {
-      console.log('updatedAutoComplete detected', items);
-      $('section.fish').html( renderFishData( items ) );
+      dataStore.setInterestingFish( items );
     }
   }()
 );
 
 
-
-var dataStore = new DataStore(),
-  viewables = {
-    interestingFish: new InterestingFish($('section.interesting-fish')[0]),
-    searchedFish: new SearchedFish($('.searched-fish')[0])
+//Create Viewables
+var viewables = {
+    interestingFish: new InterestingFish($('section.interesting-fish')[0], {empty: 'Interesting fish not loaded'}),
+    searchedFish: new SearchedFish($('.searched-fish')[0], {empty: 'No search results'})
   };
   
+//Render interesting fish: Stub data
 viewables.interestingFish.render(genStub(5));
 
+//Render searched fish: Watching changes in Datastore
+$(window.document).on('dataStoreChangedInterestingFish', function (watcher) {
+  return function (event, items) {
+    console.log(arguments)
+    watcher.render(items);
+  }
+}(viewables.searchedFish));
