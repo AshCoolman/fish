@@ -69,25 +69,28 @@
         suggest: function (items) {
             var that = this,
                 filtered_items = $.grep(items, function (item) {
-                    return item.toLowerCase().indexOf(that.q_lower) !== -1;
+
+                    return item.name.toLowerCase().indexOf(that.q_lower) !== -1;
                 });
             // cache if needed
             if (this.options.caching) {
                 this._cache[this.q_lower] = filtered_items;
             }
-            //this.render(filtered_items);
+            this.render(filtered_items);
 
         },
         render: function (items) {
+                console.log('render', items);
 
 
             var that = this,
                 itemshighlighted = $.map(items, function (item) {
-                    var itemHtml = that.options.item;
-                    return that.highlight(item);
+                    var itemHtml = item;
+                    itemHtml.html = that.highlight(item.name);
+                    return itemHtml;
             });
 
-            this.$element.trigger('updatedAutoComplete', itemshighlighted);
+            this.$element.trigger('updatedAutoComplete', [itemshighlighted]);
         },
         highlight: function (item) {
             var q = this.q.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
@@ -117,6 +120,8 @@
         },
         hide: function () {
             if (this.visible) {
+
+                this.$element.trigger('updatedAutoComplete', []);
                 this.visible = false;
                 this.$container.hide();
             }
@@ -124,7 +129,6 @@
     };
     $.fn[plugin_name] = function (options) {
         return this.each(function () {
-
             if (!this['instance_data'] + plugin_name) {
                 this['instance_data'] = new Plugin(this, options);
             }

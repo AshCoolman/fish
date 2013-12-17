@@ -12,7 +12,7 @@
 *
 *
 **/
-/* line 12, ../sass/ash.scss */
+/* line 16, ../sass/ash.scss */
 body {
   *zoom: 1;
   max-width: 68em;
@@ -28,7 +28,7 @@ body:before, body:after {
 body:after {
   clear: both;
 }
-/* line 14, ../sass/ash.scss */
+/* line 18, ../sass/ash.scss */
 body > section {
   float: left;
   display: block;
@@ -40,6 +40,21 @@ body > section:last-child {
   margin-right: 0;
 }
 
+/* line 26, ../sass/ash.scss */
+.low:before {
+  border-left-color: #99cc99 !important;
+}
+
+/* line 30, ../sass/ash.scss */
+.med:before {
+  border-left-color: #ffff7e !important;
+}
+
+/* line 33, ../sass/ash.scss */
+.high:before {
+  border-left-color: #ff2400 !important;
+}
+
 /**
 *
 *
@@ -47,28 +62,28 @@ body > section:last-child {
 *
 *
 **/
-/* line 27, ../sass/ash.scss */
+/* line 44, ../sass/ash.scss */
 form {
   display: block;
 }
-/* line 29, ../sass/ash.scss */
+/* line 46, ../sass/ash.scss */
 form > * {
   margin: 0.2em 0;
 }
 
-/* line 33, ../sass/ash.scss */
+/* line 50, ../sass/ash.scss */
 input {
   padding: 1em;
   border: solid 1px grey;
   width: 100%;
 }
 
-/* line 38, ../sass/ash.scss */
+/* line 55, ../sass/ash.scss */
 body > section {
   padding: 1em;
 }
 
-/* line 42, ../sass/ash.scss */
+/* line 59, ../sass/ash.scss */
 a, a:hover {
   text-decoration: none;
 }
@@ -80,31 +95,44 @@ a, a:hover {
 *
 *
 **/
-/* line 58, ../sass/ash.scss */
+/* line 75, ../sass/ash.scss */
 body > section.cta h1 {
   margin: 0;
 }
 
-/* line 62, ../sass/ash.scss */
+/* line 79, ../sass/ash.scss */
 body > section.fish {
   padding: 1em 0;
 }
-/* line 64, ../sass/ash.scss */
+/* line 81, ../sass/ash.scss */
 body > section.fish ul {
   list-style: none;
   clear: both;
   padding: 0em;
   margin: 0em;
 }
-/* line 69, ../sass/ash.scss */
+/* line 86, ../sass/ash.scss */
 body > section.fish ul > li {
   padding: 1em;
   margin: 0em -1px;
   border-top: 1px solid grey;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
+  position: relative;
+  padding-left: 50px;
 }
-/* line 76, ../sass/ash.scss */
+/* line 95, ../sass/ash.scss */
+body > section.fish ul > li:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 0px;
+  border: 25px solid;
+  border-color: transparent;
+}
+/* line 105, ../sass/ash.scss */
 body > section.fish ul > li:last-child {
   border-bottom: 1px solid grey;
 }

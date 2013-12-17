@@ -7,6 +7,24 @@ if (!Array.prototype.forEach) {
 	}
 }
 
+// GENERAL
+if (!Array.prototype.random) {
+	Array.prototype.random = function () {
+		return this[Math.floor(Math.random()*this.length)];
+	}
+}
+
+// GENERAL
+if (!Array.prototype.randomModulus) {
+	Array.prototype.randomModulus = function (mod) {
+		var index = Math.floor( Math.random() * this.length );
+		//console.log(' ', index,  mod, (index % mod))
+		index -= (index % mod);
+		return this[index];
+	}
+}
+
+
 var AshLib = (function () {
 	// STRING SUBS HELPER
 	function tm(string, context, split) {

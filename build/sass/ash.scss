@@ -1,6 +1,10 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+
+$low: #99CC99;
+$med: #FFFF7E;
+$high: #FF2400;
 /**
 *
 *
@@ -16,6 +20,19 @@ body {
 	}
 }
 
+
+
+ 
+.low:before {
+	border-left-color: $low !important;
+}
+
+.med:before {
+	border-left-color:$med !important;
+}
+.high:before {
+	border-left-color:$high !important;
+}
 
 /**
 *
@@ -72,7 +89,19 @@ body > section.fish {
 			border-top: 1px solid grey;
 			border-left: 1px solid grey;
 			border-right: 1px solid grey;
-		}	
+			position: relative;
+				padding-left:50px;
+		}
+		> li:before {
+				content: ' ';
+				position: absolute;
+				width: 0;
+				height: 0;
+				left: 0px;
+				top: 0px;
+				border: 25px solid;
+				border-color: transparent;
+		}
 		> li:last-child	 {
 			border-bottom: 1px solid grey;
 		}
