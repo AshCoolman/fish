@@ -1,3 +1,19 @@
+//GENERAL 
+function logg(msg) {
+	var logger;
+	if (! (logger = window.document.getElementById('logger'))) {
+		logger = window.document.body.appendChild( window.document.createElement('div') );
+		logger.style.position = 'fixed';
+		logger.style.fontSize = '0.7em';
+		logger.style.zIndex = '1';
+		logger.style.top = '0';
+		logger.style.left = '0';
+		logger.style.padding = '1em';
+
+	}
+	logger.textContent = msg;
+	console.log(msg);
+}
 // GENERAL
 if (!Array.prototype.forEach) {
 	Array.prototype.forEach = function (action, array) {

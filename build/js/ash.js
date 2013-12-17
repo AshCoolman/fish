@@ -84,6 +84,15 @@ function SearchedFish(el, options) {
 }
 SearchedFish.inherit(Fish);
 
+/**
+* All the browseable fish
+* @pconstructor
+**/
+function AllFish(el, options) {
+  this.el = el;
+  this.options = options;
+}
+AllFish.inherit(Fish);
 
 
 /**
@@ -143,9 +152,10 @@ $('input.autocompletion').on('updatedAutoComplete', function (me) {
 //Create Viewables
 var viewables = {
     interestingFish: new InterestingFish($('section.interesting-fish')[0], {empty: 'Interesting fish not loaded'}),
-    searchedFish: new SearchedFish($('.searched-fish')[0], {empty: 'No search results'})
+    searchedFish: new SearchedFish($('.searched-fish')[0], {empty: 'No search results'}),
+    allFish: new AllFish($('section.all-fish')[0], {empty: 'Full list of fish not loaded'})
   };
-  
+
 //Render interesting fish: Stub data
 viewables.interestingFish.render(genStub(5));
 
@@ -156,3 +166,15 @@ $(window.document).on('dataStoreChangedInterestingFish', function (watcher) {
     watcher.render(items);
   }
 }(viewables.searchedFish));
+
+
+//Render all fish: Stub data
+viewables.allFish.render(genStub(50));
+
+
+  logg("log online");
+
+
+//setup swipeable content
+//window.mySwipe = Swipe(document.getElementById('slider'));
+
