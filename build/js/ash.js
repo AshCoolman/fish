@@ -73,8 +73,8 @@ InterestingFish.inherit(Fish);
 * Search results of user input
 * @pconstructor
 **/
-function SearchedFish() {
-
+function SearchedFish(el) {
+  this.el = el;
 }
 SearchedFish.inherit(Fish);
 
@@ -132,9 +132,9 @@ $('input.autocompletion').on('updatedAutoComplete', function (me) {
 
 var dataStore = new DataStore(),
   viewables = {
-    interestingFish: new InterestingFish()
-};
-
-var interestingFish = new InterestingFish($('section.interesting-fish')[0]);
-interestingFish.render(genStub(5));
+    interestingFish: new InterestingFish($('section.interesting-fish')[0]),
+    searchedFish: new SearchedFish($('.searched-fish')[0])
+  };
+  
+viewables.interestingFish.render(genStub(5));
 
