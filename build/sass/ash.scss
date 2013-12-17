@@ -68,7 +68,6 @@ input.autocompletion {
 input.autocompletion, .overlay-autocompletion {
 	padding: 1em;
 }
-}
 
 
 .overlay-autocompletion {
@@ -98,7 +97,7 @@ body > section.cta h1 {
 	margin: 0;
 }
 
-body > section.fish {
+body .fish {
 	padding: 1em 0;
 	ul {
 		list-style:none;

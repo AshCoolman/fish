@@ -24,6 +24,30 @@ if (!Array.prototype.randomModulus) {
 	}
 }
 
+//PROTOTYPE INHERITANCE
+if (!Object.prototype.cloneConstructor) {
+	Object.prototype.cloneConstructor = function (object) {
+		function OneShotConstructor(){}
+		OneShotConstructor.prototype = object;
+		return new OneShotConstructor();
+	}
+}
+//PROTOTYPE INHERITANCE
+if (!Object.prototype.method) {
+	Object.prototype.method = function(name, func) {
+	  this.prototype[name] = func;
+	};
+}
+
+
+
+//PROTOTYPE INHERITANCE
+if (!Object.prototype.inherit) {
+	Object.prototype.inherit = function (base) {
+		this.prototype = cloneConstructor(base.prototype);
+  		this.prototype.constructor = this;
+	}
+}
 
 var AshLib = (function () {
 	// STRING SUBS HELPER
