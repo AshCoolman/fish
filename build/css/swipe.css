@@ -1,0 +1,66 @@
+/*
+Syntax error: Invalid CSS after "function Swipe": expected "{", was "(e,t){"use stri..."
+        on line 1 of /Users/ashleycoleman/Dropbox/_PROJECTS/qad/fish/build/sass/swipe.scss
+
+1: /Users/ashleycoleman/Dropbox/_PROJECTS/qad/fish/build/sass/swipe.scss
+
+Backtrace:
+/Users/ashleycoleman/Dropbox/_PROJECTS/qad/fish/build/sass/swipe.scss:1
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1148:in `expected'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1084:in `expected'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1079:in `tok!'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:534:in `block'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:529:in `ruleset'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:553:in `block_child'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:543:in `block_contents'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:82:in `stylesheet'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:27:in `parse'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:342:in `_to_tree'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:315:in `_render'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:262:in `render'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:31:in `create'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:26:in `block in created'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:25:in `each'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:25:in `created'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:17:in `refresh'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:30:in `block in temporary_multipath_handler'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `each'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:17:in `block (2 levels) in run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `each'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `block in run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/rb-fsevent-0.9.3/lib/rb-fsevent/fsevent.rb:43:in `call'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/rb-fsevent-0.9.3/lib/rb-fsevent/fsevent.rb:43:in `run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:20:in `run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/bin/compass:23:in `load'
+/Users/ashleycoleman/.rbenv/versions/1.9.3-p194/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"function Swipe\": expected \"{\", was \"(e,t){\"use stri...\"\A         on line 1 of /Users/ashleycoleman/Dropbox/_PROJECTS/qad/fish/build/sass/swipe.scss\A \A 1: /Users/ashleycoleman/Dropbox/_PROJECTS/qad/fish/build/sass/swipe.scss"; }

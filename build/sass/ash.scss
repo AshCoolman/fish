@@ -87,9 +87,26 @@ form {
 *
 *
 **/
+body div.swipe-wrap {
+	@include outer-container;
+	div.swipe-page {
+		@include span-columns(12);
+	}
+
+}
 
 
-body > section {
+body > section.search {
+	form { 
+	@include outer-container;
+		.text-input {
+			@include span-columns(1);
+			background-color:green;
+		}
+		input.submit-button {
+			@include span-columns(2);
+		}
+	}
 
 }
 
@@ -111,7 +128,7 @@ body .fish {
 			border-left: 1px solid grey;
 			border-right: 1px solid grey;
 			position: relative;
-				padding-left:50px;
+			padding-left:50px;
 		}
 		> li:before {
 				content: ' ';
@@ -128,3 +145,13 @@ body .fish {
 		}
 	}
 }
+.swipe-page {
+
+}
+
+.swipe-wrap { 
+}
+
+
+
+

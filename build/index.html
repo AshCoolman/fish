@@ -25,6 +25,7 @@
         <!-- -------------------------------------------- -->
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/swipe.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -38,32 +39,60 @@
 		
         <!-- -------------------------------------------- -->
         <!-- --------------WEBSITE SPECIFIC-------------- -->
-      <div class="page page-1">
-        <section class="search">
-            <form>
-              <span class="overlay-autocompletion">Type fish here</span>
-              <input type="text" value="" class="autocompletion">
-              <input type="submit" value="Check how sustainable fish is">
-            </form>
-            <div class="fish searched-fish">
-              No search results
+        <div id='slider' class='swipe'>
+          <div class='swipe-wrap'>
+
+
+            <!---------------->
+            <!-- swipe page -->
+            <div class="swipe-page"> 
+
+              <section class="search">
+                  <form>
+                    <span class="overlay-autocompletion">Type fish here</span>
+                    <input type="text" value="" class="text-input autocompletion">
+                    <input type="submit" class="submit-button" value="go">
+                  </form>
+                  <div class="fish searched-fish">
+                    No search results
+                  </div>
+              </section>
+
+              <section class="cta">
+                  <h1>Check how sustainable fish is</h1>
+              </section>
+              
+              <section class="fish interesting-fish">
+                Interesting fish has not been loaded
+              </section>
+
             </div>
-        </section>
+            <!---------------->
+            <!---------------->
 
-        <section class="cta">
-            <h1></h1>
-        </section>
-        
-        <section class="fish interesting-fish">
-          Interesting fish has not been loaded
-        </section>
-      </div>
 
-      <div class="page page-1">
-        <section class="fish all-fish">
-          Full fish list has not been loaded
-        </section>
-      </div>
+
+            <!---------------->
+            <!-- swipe page -->
+            <div class="swipe-page"> 
+
+
+              <section class="fish all-fish">
+                Full fish list has not been loaded
+              </section>
+
+
+            </div>
+            <!---------------->
+            <!---------------->
+
+
+          </div>
+        </div>
+
+       
+
+
 
       <script src="js/zepto.autocomplete.js"></script>
       <script src="js/ashlib.js"></script>
