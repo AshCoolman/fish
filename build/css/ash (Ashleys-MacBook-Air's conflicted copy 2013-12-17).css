@@ -1,0 +1,159 @@
+/* line 2, ../sass/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+*
+*
+* LAYOUT
+*
+*
+**/
+/* line 18, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+body:before, body:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+body:after {
+  clear: both;
+}
+/* line 20, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 40, ../sass/neat/grid/_span-columns.scss */
+body > section:last-child {
+  margin-right: 0;
+}
+
+/* line 28, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+.low:before {
+  border-left-color: #99cc99 !important;
+}
+
+/* line 32, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+.med:before {
+  border-left-color: #ffff7e !important;
+}
+
+/* line 35, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+.high:before {
+  border-left-color: #ff2400 !important;
+}
+
+/**
+*
+*
+* VISUAL: Controls
+*
+*
+**/
+/* line 46, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+form {
+  display: block;
+}
+/* line 48, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+form > * {
+  margin: 0.2em 0;
+}
+
+/* line 52, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+input {
+  border: solid 1px grey;
+  width: 100%;
+  padding: 1em;
+}
+
+/* line 57, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section {
+  padding: 1em;
+}
+
+/* line 61, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+a, a:hover {
+  text-decoration: none;
+}
+
+/* line 65, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+input.autocompletion {
+  opacity: 1;
+  background-color: transparent;
+}
+
+/* line 71, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+.overlay-autocompletion {
+  padding: 1em;
+  position: absolute;
+  z-index: -1;
+  color: grey;
+  display: block;
+  padding: 1em;
+}
+
+/* line 80, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+form {
+  position: relative;
+}
+
+/**
+*
+*
+* VISUAL: Page controls
+*
+*
+**/
+/* line 96, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section.cta h1 {
+  margin: 0;
+}
+
+/* line 100, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section.fish {
+  padding: 1em 0;
+}
+/* line 102, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section.fish ul {
+  list-style: none;
+  clear: both;
+  padding: 0em;
+  margin: 0em;
+}
+/* line 107, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section.fish ul > li {
+  padding: 1em;
+  margin: 0em -1px;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  position: relative;
+  padding-left: 50px;
+}
+/* line 116, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section.fish ul > li:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 0px;
+  border: 25px solid;
+  border-color: transparent;
+}
+/* line 126, ../sass/ash (Ashleys-MacBook-Air's conflicted copy 2013-12-17).scss */
+body > section.fish ul > li:last-child {
+  border-bottom: 1px solid grey;
+}

@@ -5,6 +5,8 @@
 $low: #99CC99;
 $med: #FFFF7E;
 $high: #FF2400;
+
+$input-padding:1em;
 /**
 *
 *
@@ -50,7 +52,7 @@ form {
 input {
 	border: solid 1px grey;
 	width: 100%;
-	padding: 1em;
+	padding: $input-padding;
 }
 body > section {
 	padding: 1em;
@@ -65,22 +67,21 @@ input.autocompletion {
 	background-color: transparent;
 
 }
-input.autocompletion, .overlay-autocompletion {
-	padding: 1em;
-}
-}
-
 
 .overlay-autocompletion {
+	padding: 1em;
 	position: absolute;
 	z-index:-1;
 	color:grey;
 	display:block;
+	padding: $input-padding;
 }
 
 form {
 	position: relative;
 }
+
+
 /**
 *
 *
@@ -88,8 +89,6 @@ form {
 *
 *
 **/
-
-
 body > section {
 
 }

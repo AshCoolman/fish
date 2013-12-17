@@ -1,15 +1,14 @@
 
 $('input.autocompletion').autocompletion({
-    source: genStub(5) // Also it can be a function. See below.
+    source: genStub(5), 
+    overlay: '.overlay-autocompletion'
 });
  
 
 $('input.autocompletion').on('updatedAutoComplete', function (me) {
     return function (e, items) {
-        console.log('updatedAutoComplete detected', items);
-
+      console.log('updatedAutoComplete detected', items);
       $('section.fish').html( renderFishData( items ) );
-
     }
   }()
 );
@@ -20,8 +19,6 @@ $('input.autocompletion').on('updatedAutoComplete', function (me) {
 /**
 * Takes in data structure representing fishData, Outputs fish list html
 **/
-
-
 function genStub (num) {
   var stub = [],
     num = num || 10,
@@ -37,7 +34,10 @@ function genStub (num) {
     return stub;
 }
 
-
+/**
+* Takes input of fish data, outputs fish list html
+* @param (Array) fishArr - A list of fish data objects (<code>{threat: ..., name: ...}</code>)
+**/
 function renderFishData(fishArr) {
   var html = ['<ul>'], fish;
   for (var f = 0, fish; f < fishArr.length, fish = fishArr[f]; f++) {
@@ -47,7 +47,7 @@ function renderFishData(fishArr) {
   console.log(html.join('\n'))
   return html.join('\n');
 }
-
 $('section.fish').html( renderFishData( genStub(5) ) );
+
 
 

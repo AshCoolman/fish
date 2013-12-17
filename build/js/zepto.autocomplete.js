@@ -14,6 +14,8 @@
         this.fill = this.options.fill || this.fill;
         this.$container = $(this.options.container);
         this.$element = $(element);
+        this.$overlay = $(options.overlay);
+        console.log('overlay', this.$overlay);
         this._attr_value = "data-item-value";
         this._cache = {};
         this._class_current = "current";
@@ -45,8 +47,9 @@
                 //this.hide();
             }
         },
-        keyup: function () {
+        keyup: function () { 
             this.q = this.$element.val();
+            this.setOverlayVisible(!this.q);
             this.q_lower = this.q.toLowerCase();
             if (!this.q) {
                 return this.hide();
@@ -119,12 +122,17 @@
             }
         },
         hide: function () {
+            this.render([])
             if (this.visible) {
 
-                this.$element.trigger('updatedAutoComplete', []);
+
                 this.visible = false;
                 this.$container.hide();
             }
+        },
+        setOverlayVisible: function (vis) {
+            console.log('overlay', vis ? 'shown' : 'hidden');
+            vis ? this.$overlay.show() : this.$overlay.hide();
         }
     };
     $.fn[plugin_name] = function (options) {
